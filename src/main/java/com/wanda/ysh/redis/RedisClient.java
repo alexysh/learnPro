@@ -5,7 +5,7 @@
  * use it only in accordance with the terms of the license agreement you entered
  * into with Wanda.cn.
  */
-package com.wanda.redis;
+package com.wanda.ysh.redis;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

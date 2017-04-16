@@ -13,18 +13,18 @@ import javax.crypto.SecretKey;
 
 public class EncrypDES3 {
 
-	// KeyGenerator 提供对称密钥生成器的功能，支持各种算�?
+	// KeyGenerator 提供对称密钥生成器的功能，支持各种算�?
 	private KeyGenerator keygen;
 	// SecretKey 负责保存对称密钥
 	private SecretKey deskey;
-	// Cipher负责完成加密或解密工�?
+	// Cipher负责完成加密或解密工�?
 	private Cipher c;
 	// 该字节数组负责保存加密的结果
 	private byte[] cipherByte;
 
 	public EncrypDES3() throws NoSuchAlgorithmException, NoSuchPaddingException {
 		Security.addProvider(new com.sun.crypto.provider.SunJCE());
-		// 实例化支持DES算法的密钥生成器(算法名称命名�?��规定，否则抛出异�?
+		// 实例化支持DES算法的密钥生成器(算法名称命名�?��规定，否则抛出异�?
 		keygen = KeyGenerator.getInstance("DESede");
 		// 生成密钥
 		deskey = keygen.generateKey();
@@ -78,12 +78,12 @@ public class EncrypDES3 {
 	 */
 	public static void main(String[] args) throws Exception {
 		EncrypDES3 des = new EncrypDES3();
-		String msg ="郭德�?搞笑相声全集";
+		String msg ="郭德�?搞笑相声全集";
 		byte[] encontent = des.Encrytor(msg);
 		byte[] decontent = des.Decryptor(encontent);
-		System.out.println("明文�?" + msg);
-		System.out.println("加密�?" + new String(encontent));
-		System.out.println("解密�?" + new String(decontent));
+		System.out.println("明文�?" + msg);
+		System.out.println("加密�?" + new String(encontent));
+		System.out.println("解密�?" + new String(decontent));
 
 	}
 
