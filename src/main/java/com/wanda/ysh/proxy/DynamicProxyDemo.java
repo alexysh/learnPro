@@ -1,8 +1,8 @@
 package com.wanda.ysh.proxy;
  
 import java.lang.reflect.Proxy;
-import com.ysh.proxy.Subject;
-import com.ysh.proxy.RealSubject;
+import com.wanda.ysh.proxy.Subject;
+import com.wanda.ysh.proxy.RealSubject;
  
 public class DynamicProxyDemo {
     public static void consumer(Subject subject) {
